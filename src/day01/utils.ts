@@ -18,4 +18,10 @@ export function getAllDigits(line: string) {
   return digitStrings ? digitStrings.map(Number) : [];
 }
 
-export function addFistAndLastDigit(numbers: number[]) {}
+export function addFirstAndLastDigit(numbers: number[]) {
+  if (numbers && numbers.length > 0) {
+    return numbers[0] * 10 + numbers[numbers.length - 1];
+  }
+
+  return 0;
+}
