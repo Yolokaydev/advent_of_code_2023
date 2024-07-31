@@ -12,6 +12,10 @@ export async function readFileLines(filePath: string): Promise<string[]> {
   }
 }
 
+export function getAllNumbers(line: String): [String] {
+  return [""];
+}
+
 export function getAllDigits(line: string) {
   const digitStrings = line.match(/\d/g);
 

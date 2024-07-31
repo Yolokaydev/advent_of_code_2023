@@ -8,7 +8,9 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "day01": "node dist/day01/day01.js",
-    "run01": "npm run build && npm run day01"
+    "day01part2":"node dist/day01/day01_part2.js",
+    "run01": "npm run build && npm run day01",
+    "run01p2": "npm run build && npm run day01part2"
   },
   "keywords": [],
   "author": "",
