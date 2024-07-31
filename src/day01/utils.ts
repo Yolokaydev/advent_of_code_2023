@@ -22,6 +22,5 @@ export function addFirstAndLastDigit(numbers: number[]) {
   if (numbers && numbers.length > 0) {
     return numbers[0] * 10 + numbers[numbers.length - 1];
   }
-
   return 0;
 }
