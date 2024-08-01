@@ -15,7 +15,35 @@ export async function readFileLines(filePath: string): Promise<string[]> {
 export function getAllNumbers(line: String): [String] {
   return [""];
 }
+export function getNumber(line: String): Number {
+  const numberMap: { [key: string]: number } = {
+    zero: 0,
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5,
+    six: 6,
+    seven: 7,
+    eight: 8,
+    nine: 9,
+  };
 
+  // Replace spelled out numbers with their digit equivalents
+  for (const [word, digit] of Object.entries(numberMap)) {
+    const regex = new RegExp(word, "gi");
+    line = line.replace(regex, digit.toString());
+  }
+
+  // Extract all numbers and sort them in descending order
+  const numbers = line
+    .match(/\d+/g)
+    ?.map(Number)
+    .sort((a, b) => b - a);
+
+  // Join sorted numbers into a single number
+  return numbers ? Number(numbers.join("")) : 0;
+}
 export function getAllDigits(line: string) {
   const digitStrings = line.match(/\d/g);
 

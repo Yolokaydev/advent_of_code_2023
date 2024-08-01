@@ -4,11 +4,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "tsc",
     "start": "node dist/index.js",
     "day01": "node dist/day01/day01.js",
-    "day01part2":"node dist/day01/day01_part2.js",
+    "day01part2": "node dist/day01/day01_part2.js",
     "run01": "npm run build && npm run day01",
     "run01p2": "npm run build && npm run day01part2"
   },
@@ -17,9 +17,11 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/jest": "^29.5.12",
     "@types/node": "^20.14.8",
     "jest": "^29.7.0",
+    "ts-jest": "^29.2.4",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.4"
   }
 }
