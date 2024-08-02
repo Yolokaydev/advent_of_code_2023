@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "test": "jest",
+    "testd1p2": "npm test -- src/day01/utils.test.ts",
     "build": "tsc",
     "start": "node dist/index.js",
     "day01": "node dist/day01/day01.js",
     "day01part2": "node dist/day01/day01_part2.js",
     "run01": "npm run build && npm run day01",
-    "run01p2": "npm run build && npm run day01part2"
+    "run01p2": "npm run build && npm run day01part2",
+    "debug": "npm run build && node dist/day01/utils.js"
   },
   "keywords": [],
   "author": "",

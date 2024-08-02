@@ -15,7 +15,7 @@ export async function readFileLines(filePath: string): Promise<string[]> {
 export function getAllNumbers(line: String): [String] {
   return [""];
 }
-export function getNumber(line: String): Number {
+export function getNumber1(line: String): Number {
   const numberMap: { [key: string]: number } = {
     zero: 0,
     one: 1,
@@ -44,6 +44,26 @@ export function getNumber(line: String): Number {
   // Join sorted numbers into a single number
   return numbers ? Number(numbers.join("")) : 0;
 }
+export function getNumber(line: String): number {
+  let numbers: number[] = [];
+  let twoDigit: number;
+  let str = "9ppcbgxxdztseven7";
+  const numberStings: String[] = [
+    "zero",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+  ];
+  twoDigit = 42;
+  return twoDigit;
+}
+
 export function getAllDigits(line: string) {
   const digitStrings = line.match(/\d/g);
 
@@ -56,3 +76,5 @@ export function addFirstAndLastDigit(numbers: number[]) {
   }
   return 0;
 }
+
+getNumber("9ppcbgxxdztseven");
